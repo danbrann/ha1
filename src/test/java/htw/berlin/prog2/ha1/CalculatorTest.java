@@ -105,7 +105,23 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    @DisplayName("should keep display unchanged when pressing = without prior input")
+    void testEqualsAfterOperationWithoutSecondOperand() {
+        Calculator calc = new Calculator();
+
+        calc.pressEqualsKey();
+
+        String expected = "0";
+        String actual = calc.readScreen();
+
+        assertEquals(expected, actual);
+    }
+
+
 
 
     //TODO hier weitere Tests erstellen
 }
+
+
