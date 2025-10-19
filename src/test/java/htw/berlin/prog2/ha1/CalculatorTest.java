@@ -87,6 +87,9 @@ class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+
+    //TODO hier weitere Tests erstellen
+
     @Test
     @DisplayName("should display result after dividing two positive numbers")
     void testPositiveDivision() {
@@ -106,13 +109,14 @@ class CalculatorTest {
     }
 
     @Test
-    @DisplayName("should keep display unchanged when pressing = without prior input")
-    void testEqualsAfterOperationWithoutSecondOperand() {
+    @DisplayName("should display 1 after taking square root of one")
+    void testSquareRootOfOne() {
         Calculator calc = new Calculator();
 
-        calc.pressEqualsKey();
+        calc.pressDigitKey(4);
+        calc.pressUnaryOperationKey("√");
 
-        String expected = "0";
+        String expected = "2";
         String actual = calc.readScreen();
 
         assertEquals(expected, actual);
@@ -120,8 +124,6 @@ class CalculatorTest {
 
 
 
-
-    //TODO hier weitere Tests erstellen
 }
 
 
