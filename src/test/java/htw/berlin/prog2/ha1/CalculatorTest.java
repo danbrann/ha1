@@ -108,9 +108,11 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+
+
     @Test
-    @DisplayName("should display 1 after taking square root of one")
-    void testSquareRootOfOne() {
+    @DisplayName("should display 2 after taking square root of 4")
+    void testSquareRootOfFour() {
         Calculator calc = new Calculator();
 
         calc.pressDigitKey(4);
@@ -121,6 +123,7 @@ class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+
 
 
 
